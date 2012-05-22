@@ -5,7 +5,6 @@
 // Generated on: 2011.09.20 at 08:01:46 AM EDT 
 //
 
-
 package com.ciphertool.cfgreader.generated;
 
 import java.util.ArrayList;
@@ -17,11 +16,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for anonymous complex type.
+ * <p>
+ * Java class for anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType>
@@ -39,68 +40,63 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "rule"
-})
+@XmlType(name = "", propOrder = { "rule" })
 @XmlRootElement(name = "ContextFreeGrammar")
 public class ContextFreeGrammar {
 
-    @XmlElement(name = "Rule", required = true)
-    protected List<RuleType> rule;
-    @XmlAttribute(name = "first-rule", required = true)
-    protected String firstRule;
+	@XmlElement(name = "Rule", required = true)
+	protected List<RuleType> rule;
+	@XmlAttribute(name = "first-rule", required = true)
+	protected String firstRule;
 
-    /**
-     * Gets the value of the rule property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rule property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getRule().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link RuleType }
-     * 
-     * 
-     */
-    public List<RuleType> getRule() {
-        if (rule == null) {
-            rule = new ArrayList<RuleType>();
-        }
-        return this.rule;
-    }
+	/**
+	 * Gets the value of the rule property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the rule property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getRule().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list {@link RuleType }
+	 * 
+	 * 
+	 */
+	public List<RuleType> getRule() {
+		if (rule == null) {
+			rule = new ArrayList<RuleType>();
+		}
+		return this.rule;
+	}
 
-    /**
-     * Gets the value of the firstRule property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFirstRule() {
-        return firstRule;
-    }
+	/**
+	 * Gets the value of the firstRule property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getFirstRule() {
+		return firstRule;
+	}
 
-    /**
-     * Sets the value of the firstRule property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFirstRule(String value) {
-        this.firstRule = value;
-    }
+	/**
+	 * Sets the value of the firstRule property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setFirstRule(String value) {
+		this.firstRule = value;
+	}
 
 }

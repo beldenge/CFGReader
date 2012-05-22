@@ -15,16 +15,16 @@ import com.ciphertool.cfgreader.generated.ProductionType;
 import com.ciphertool.cfgreader.generated.RuleType;
 
 public class ContextFreeGrammarHelper {
-	
+
 	private static final String JAXBPackage = "com.ciphertool.cfgreader.generated";
 	private ContextFreeGrammar contextFreeGrammar;
-	
+
 	public ContextFreeGrammarHelper(File file) throws JAXBException {
 		JAXBContext jc = JAXBContext.newInstance(JAXBPackage);
 		Unmarshaller unmarshaller = jc.createUnmarshaller();
 		contextFreeGrammar = (ContextFreeGrammar) unmarshaller.unmarshal(file);
 	}
-	
+
 	public Tree<ProductionType> generateRandomSyntaxTree() {
 		RuleType firstRule = getFirstRuleType();
 		ExpansionType firstExpansion = getRandomExpansion(firstRule);
@@ -37,7 +37,7 @@ public class ContextFreeGrammarHelper {
 		syntaxTree.setRootElement(rootNode);
 		return syntaxTree;
 	}
-	
+
 	public Node<ProductionType> expand(ExpansionType expansion) {
 		Node<ProductionType> productions = new Node<ProductionType>();
 		for (ProductionType production : expansion.getProduction()) {
@@ -46,8 +46,7 @@ public class ContextFreeGrammarHelper {
 				newChild = new Node<ProductionType>();
 				newChild.setData(production);
 				productions.addChild(newChild);
-			}
-			else if (production.getType().equals("NonTerminal")) {
+			} else if (production.getType().equals("NonTerminal")) {
 				newChild = expand(getRandomExpansion(getRuleByName(production.getSymbol())));
 				newChild.setData(production);
 				productions.addChild(newChild);
@@ -55,18 +54,18 @@ public class ContextFreeGrammarHelper {
 		}
 		return productions;
 	}
-	
+
 	public ExpansionType getRandomExpansion(RuleType rule) {
 		List<ExpansionType> expansions = rule.getExpansion();
-		int randomIndex = (int)(Math.random() * expansions.size());
+		int randomIndex = (int) (Math.random() * expansions.size());
 		return expansions.get(randomIndex);
 	}
-	
+
 	public RuleType getFirstRuleType() {
 		String firstRuleName = contextFreeGrammar.getFirstRule();
 		return getRuleByName(firstRuleName);
 	}
-	
+
 	public RuleType getRuleByName(String name) {
 		for (RuleType rt : contextFreeGrammar.getRule()) {
 			if (rt.getNonTerminal().equals(name))
@@ -78,7 +77,7 @@ public class ContextFreeGrammarHelper {
 	public void setContextFreeGrammar(ContextFreeGrammar contextFreeGrammar) {
 		this.contextFreeGrammar = contextFreeGrammar;
 	}
-	
+
 	public String printSyntaxTree(Tree<ProductionType> syntaxTree) {
 		return syntaxTree.toString();
 	}

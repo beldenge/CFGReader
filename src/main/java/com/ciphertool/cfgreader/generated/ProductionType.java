@@ -5,7 +5,6 @@
 // Generated on: 2011.09.20 at 08:01:46 AM EDT 
 //
 
-
 package com.ciphertool.cfgreader.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -13,11 +12,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ProductionType complex type.
+ * <p>
+ * Java class for ProductionType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ProductionType">
@@ -36,61 +37,55 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "ProductionType")
 public class ProductionType {
 
-    @XmlAttribute(required = true)
-    protected String symbol;
-    @XmlAttribute(required = true)
-    protected String type;
+	@XmlAttribute(required = true)
+	protected String symbol;
+	@XmlAttribute(required = true)
+	protected String type;
 
-    /**
-     * Gets the value of the symbol property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSymbol() {
-        return symbol;
-    }
+	/**
+	 * Gets the value of the symbol property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getSymbol() {
+		return symbol;
+	}
 
-    /**
-     * Sets the value of the symbol property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSymbol(String value) {
-        this.symbol = value;
-    }
+	/**
+	 * Sets the value of the symbol property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setSymbol(String value) {
+		this.symbol = value;
+	}
 
-    /**
-     * Gets the value of the type property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getType() {
-        return type;
-    }
+	/**
+	 * Gets the value of the type property.
+	 * 
+	 * @return possible object is {@link String }
+	 * 
+	 */
+	public String getType() {
+		return type;
+	}
 
-    /**
-     * Sets the value of the type property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setType(String value) {
-        this.type = value;
-    }
-    
-    public String toString() {
-    	return this.symbol;
-    }
+	/**
+	 * Sets the value of the type property.
+	 * 
+	 * @param value
+	 *            allowed object is {@link String }
+	 * 
+	 */
+	public void setType(String value) {
+		this.type = value;
+	}
+
+	public String toString() {
+		return this.symbol;
+	}
 
 }

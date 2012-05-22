@@ -5,7 +5,6 @@
 // Generated on: 2011.09.20 at 08:01:46 AM EDT 
 //
 
-
 package com.ciphertool.cfgreader.generated;
 
 import java.util.ArrayList;
@@ -15,11 +14,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for ExpansionType complex type.
+ * <p>
+ * Java class for ExpansionType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  * 
  * <pre>
  * &lt;complexType name="ExpansionType">
@@ -36,41 +37,40 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExpansionType", propOrder = {
-    "production"
-})
+@XmlType(name = "ExpansionType", propOrder = { "production" })
 public class ExpansionType {
 
-    @XmlElement(name = "Production")
-    protected List<ProductionType> production;
+	@XmlElement(name = "Production")
+	protected List<ProductionType> production;
 
-    /**
-     * Gets the value of the production property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the production property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    getProduction().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ProductionType }
-     * 
-     * 
-     */
-    public List<ProductionType> getProduction() {
-        if (production == null) {
-            production = new ArrayList<ProductionType>();
-        }
-        return this.production;
-    }
+	/**
+	 * Gets the value of the production property.
+	 * 
+	 * <p>
+	 * This accessor method returns a reference to the live list, not a
+	 * snapshot. Therefore any modification you make to the returned list will
+	 * be present inside the JAXB object. This is why there is not a
+	 * <CODE>set</CODE> method for the production property.
+	 * 
+	 * <p>
+	 * For example, to add a new item, do as follows:
+	 * 
+	 * <pre>
+	 * getProduction().add(newItem);
+	 * </pre>
+	 * 
+	 * 
+	 * <p>
+	 * Objects of the following type(s) are allowed in the list
+	 * {@link ProductionType }
+	 * 
+	 * 
+	 */
+	public List<ProductionType> getProduction() {
+		if (production == null) {
+			production = new ArrayList<ProductionType>();
+		}
+		return this.production;
+	}
 
 }
