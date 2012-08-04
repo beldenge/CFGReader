@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
 
-<xs:simpleType name="SymbolType">
-	<xs:restriction base="xs:string">
-		<xs:enumeration value="Terminal"/>
-		<xs:enumeration value="NonTerminal"/>
-	</xs:restriction>
-</xs:simpleType>
+	<xs:simpleType name="SymbolType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Terminal" />
+			<xs:enumeration value="NonTerminal" />
+		</xs:restriction>
+	</xs:simpleType>
 
-<xs:complexType name="ProductionType">
-	<xs:attribute name="symbol" type="xs:string" use="required"/>
-	<xs:attribute name="type" type="SymbolType" use="required"/>
-</xs:complexType>
-
-<xs:complexType name="ExpansionType">
-	<xs:sequence>
-		<xs:element name="Production" type="ProductionType" minOccurs="1" maxOccurs="unbounded"/>
-	</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="RuleType">
-	<xs:sequence>
-		<xs:element name="Expansion" type="ExpansionType" minOccurs="1" maxOccurs="unbounded"/>
-	</xs:sequence>
-	<xs:attribute name="non-terminal" type="xs:string" use="required"/>
-</xs:complexType>
-
-<xs:element name="ContextFreeGrammar">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="Rule" type="RuleType" minOccurs="1" maxOccurs="unbounded"/>
-		</xs:sequence>
-		<xs:attribute name="first-rule" type="xs:string" use="required"/>
+	<xs:complexType name="ProductionType">
+		<xs:attribute name="symbol" type="xs:string" use="required" />
+		<xs:attribute name="type" type="SymbolType" use="required" />
 	</xs:complexType>
-</xs:element>
+
+	<xs:complexType name="ExpansionType">
+		<xs:sequence>
+			<xs:element name="Production" type="ProductionType"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RuleType">
+		<xs:sequence>
+			<xs:element name="Expansion" type="ExpansionType"
+				minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="non-terminal" type="xs:string" use="required" />
+	</xs:complexType>
+
+	<xs:element name="ContextFreeGrammar">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Rule" type="RuleType" minOccurs="1"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="first-rule" type="xs:string" use="required" />
+		</xs:complexType>
+	</xs:element>
 
 </xs:schema>
