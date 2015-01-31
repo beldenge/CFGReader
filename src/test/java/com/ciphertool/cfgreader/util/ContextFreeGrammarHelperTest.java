@@ -36,7 +36,7 @@ public class ContextFreeGrammarHelperTest {
 
 	@Before
 	public void setUp() throws Exception {
-		File grammarFile = new File("src\\data\\xml\\EnglishSentenceCFG.xml");
+		File grammarFile = new File("src/data/xml/EnglishSentenceCFG.xml");
 		cfgHelper = new ContextFreeGrammarHelper(grammarFile);
 	}
 

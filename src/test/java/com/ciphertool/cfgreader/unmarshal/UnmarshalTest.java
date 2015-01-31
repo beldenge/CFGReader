@@ -45,7 +45,7 @@ public class UnmarshalTest {
 	@Test
 	public void testUnmarshal() throws JAXBException {
 		ContextFreeGrammar cfg = (ContextFreeGrammar) unmarshaller.unmarshal(new File(
-				"src\\data\\xml\\EnglishSentenceCFG.xml"));
+				"src/data/xml/EnglishSentenceCFG.xml"));
 		assertEquals("Sentence", cfg.getFirstRule());
 		RuleType rt = cfg.getRule().get(0);
 		assertEquals("Sentence", rt.getNonTerminal());
