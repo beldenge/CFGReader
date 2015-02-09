@@ -6,7 +6,7 @@
 //
 
 /**
- * Copyright 2013 George Belden
+ * Copyright 2015 George Belden
  * 
  * This file is part of CFGReader.
  * 
