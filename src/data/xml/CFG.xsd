@@ -10,8 +10,7 @@ CFGReader is distributed in the hope that it will be useful, but WITHOUT ANY WAR
 
 You should have received a copy of the GNU General Public License along with CFGReader.  If not, see <http://www.gnu.org/licenses/>.
  -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
 	<xs:simpleType name="SymbolType">
 		<xs:restriction base="xs:string">
@@ -27,15 +26,13 @@ You should have received a copy of the GNU General Public License along with CFG
 
 	<xs:complexType name="ExpansionType">
 		<xs:sequence>
-			<xs:element name="Production" type="ProductionType"
-				minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="Production" type="ProductionType" minOccurs="1" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="RuleType">
 		<xs:sequence>
-			<xs:element name="Expansion" type="ExpansionType"
-				minOccurs="1" maxOccurs="unbounded" />
+			<xs:element name="Expansion" type="ExpansionType" minOccurs="1" maxOccurs="unbounded" />
 		</xs:sequence>
 		<xs:attribute name="non-terminal" type="xs:string" use="required" />
 	</xs:complexType>
@@ -43,8 +40,7 @@ You should have received a copy of the GNU General Public License along with CFG
 	<xs:element name="ContextFreeGrammar">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Rule" type="RuleType" minOccurs="1"
-					maxOccurs="unbounded" />
+				<xs:element name="Rule" type="RuleType" minOccurs="1" maxOccurs="unbounded" />
 			</xs:sequence>
 			<xs:attribute name="first-rule" type="xs:string" use="required" />
 		</xs:complexType>

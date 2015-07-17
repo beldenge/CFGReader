@@ -22,12 +22,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represents a Tree of Objects of generic type T. The Tree is represented as a
- * single rootElement which points to a List<Node<T>> of children. There is no
- * restriction on the number of children that a particular node may have. This
- * Tree provides a method to serialize the Tree into a List by doing a pre-order
- * traversal. It has several methods to allow easy updation of Nodes in the
- * Tree.
+ * Represents a Tree of Objects of generic type T. The Tree is represented as a single rootElement which points to a
+ * List<Node<T>> of children. There is no restriction on the number of children that a particular node may have. This
+ * Tree provides a method to serialize the Tree into a List by doing a pre-order traversal. It has several methods to
+ * allow easy updation of Nodes in the Tree.
  */
 public class Tree<T> {
 
@@ -60,8 +58,8 @@ public class Tree<T> {
 	}
 
 	/**
-	 * Returns the Tree<T> as a List of Node<T> objects. The elements of the
-	 * List are generated from a pre-order traversal of the tree.
+	 * Returns the Tree<T> as a List of Node<T> objects. The elements of the List are generated from a pre-order
+	 * traversal of the tree.
 	 * 
 	 * @return a List<Node<T>>.
 	 */
@@ -72,8 +70,7 @@ public class Tree<T> {
 	}
 
 	/**
-	 * Returns a String representation of the Tree. The elements are generated
-	 * from a pre-order traversal of the Tree.
+	 * Returns a String representation of the Tree. The elements are generated from a pre-order traversal of the Tree.
 	 * 
 	 * @return the String representation of the Tree.
 	 */
@@ -82,10 +79,9 @@ public class Tree<T> {
 	}
 
 	/**
-	 * Walks the Tree in pre-order style. This is a recursive method, and is
-	 * called from the toList() method with the root element as the first
-	 * argument. It appends to the second argument, which is passed by reference
-	 * * as it recurses down the tree.
+	 * Walks the Tree in pre-order style. This is a recursive method, and is called from the toList() method with the
+	 * root element as the first argument. It appends to the second argument, which is passed by reference * as it
+	 * recurses down the tree.
 	 * 
 	 * @param element
 	 *            the starting element.

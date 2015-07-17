@@ -38,8 +38,7 @@ import javax.xml.bind.annotation.XmlType;
  * Java class for ExpansionType complex type.
  * 
  * <p>
- * The following schema fragment specifies the expected content contained within
- * this class.
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="ExpansionType">
@@ -66,10 +65,9 @@ public class ExpansionType {
 	 * Gets the value of the production property.
 	 * 
 	 * <p>
-	 * This accessor method returns a reference to the live list, not a
-	 * snapshot. Therefore any modification you make to the returned list will
-	 * be present inside the JAXB object. This is why there is not a
-	 * <CODE>set</CODE> method for the production property.
+	 * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to
+	 * the returned list will be present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for
+	 * the production property.
 	 * 
 	 * <p>
 	 * For example, to add a new item, do as follows:
@@ -80,8 +78,7 @@ public class ExpansionType {
 	 * 
 	 * 
 	 * <p>
-	 * Objects of the following type(s) are allowed in the list
-	 * {@link ProductionType }
+	 * Objects of the following type(s) are allowed in the list {@link ProductionType }
 	 * 
 	 * 
 	 */
