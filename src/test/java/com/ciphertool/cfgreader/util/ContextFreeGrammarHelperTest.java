@@ -22,16 +22,17 @@ import java.io.File;
 
 import javax.xml.bind.JAXBException;
 
-import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.ciphertool.cfgreader.datastructures.Tree;
 import com.ciphertool.cfgreader.generated.ProductionType;
 
 public class ContextFreeGrammarHelperTest {
+	private static Logger log = LoggerFactory.getLogger(ContextFreeGrammarHelperTest.class);
 
-	static Logger log = Logger.getLogger(ContextFreeGrammarHelperTest.class);
 	ContextFreeGrammarHelper cfgHelper;
 
 	@Before
